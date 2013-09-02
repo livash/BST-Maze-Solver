@@ -1,4 +1,4 @@
-Problem by https://github.com/cskevint/interview/blob/master/maze.md
+Problem from https://github.com/cskevint/interview/blob/master/maze.md
 Maze Solver
 ===========
 
