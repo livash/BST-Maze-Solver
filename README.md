@@ -1,5 +1,5 @@
-Maze Solver
 Problem by https://github.com/cskevint/interview/blob/master/maze.md
+Maze Solver
 ===========
 
      ___________________
