@@ -25,13 +25,11 @@ class Board
     
     roots_array = [root]
     until roots_array.empty?
-      #p roots_array.length
       node = roots_array.pop
       @explored_tiles_array << node.value
       node.children.each do |child|
         roots_array << self.add_leaves_to_tree_at(child)
       end
-
     end
     
     root
@@ -111,20 +109,4 @@ class Board
     rows, cols = self.dimentions
     !(row > -1 and col > -1 and row < rows and col < cols)
   end
-end
-
-if $PROGRAM_NAME == __FILE__
-  b = Board.new(" ___________________ \n|_  |  ___     _   _|\n| | |  _|___| |_  | |\n|  _____|_  |  _|   |\n| | |  _  |  _|_  | |\n|___| | | |  _  | | |\n| |_  |  _____| | |_|\n| |___| |  _|   |_  |\n|     | |___  |_  | |\n|_| | |  _  |_| |_| |\n|___|___|_______|___|\n")
-  p b.dimentions
-  b.print_board
-  # p b.board[0][1]
-  # p b.board[0][3]
-   # p b.is_valid_move?(0, 5)
- #   p b.was_visited_at?(0, 5)
- #   p b.is_out_of_bounds?(0, 5)
-  #debugger
-   root2 = b.build_tree([9,19])
-  # #p root2.children.map { |child| child.value }
-  # #p root2.children.first.children.map { |child| child.value }
-
 end

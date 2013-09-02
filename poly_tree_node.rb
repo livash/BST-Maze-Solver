@@ -53,7 +53,4 @@ if $PROGRAM_NAME == __FILE__
   a.add_child(c)
   c.add_child(d)
   b.add_child(e)
-  #puts a.dfs(4).value
- visited = a.dfs_path(5)
- puts parse_path(a, visited).map {|node| node.value}
 end

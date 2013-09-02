@@ -40,8 +40,7 @@ def translate(path_array)
     result << "N" if point_1.first - point_2.first < 0
     result << "S" if point_1.first - point_2.first > 0
     result << "E" if point_1.last - point_2.last > 0
-    result << "W" if point_1.last - point_2.last < 0
-      
+    result << "W" if point_1.last - point_2.last < 0 
   end
   
   result.join('')
